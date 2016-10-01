@@ -14,6 +14,7 @@
 		CC89B43D1D9FE3D0006BFD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC89B4371D9FE3D0006BFD6E /* Main.storyboard */; };
 		CC89B4401D9FE5BC006BFD6E /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */; };
 		CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */; };
+		CC89B4451D9FE897006BFD6E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4441D9FE897006BFD6E /* DataManager.swift */; };
 		CC89B4481D9FE8D3006BFD6E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4471D9FE8D3006BFD6E /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		CC89B4371D9FE3D0006BFD6E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		CC89B4441D9FE897006BFD6E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CC89B4471D9FE8D3006BFD6E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 				CC89B4461D9FE8B6006BFD6E /* Configuration */,
 				CC89B4351D9FE3D0006BFD6E /* Storyboards */,
 				CC89B4331D9FE3D0006BFD6E /* Resources */,
+				CC89B4431D9FE877006BFD6E /* Managers */,
 				CC89B4311D9FE3D0006BFD6E /* Supporting Files */,
 			);
 			path = Cloudy;
@@ -127,6 +130,14 @@
 				CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */,
 			);
 			path = "Weather View Controllers";
+			sourceTree = "<group>";
+		};
+		CC89B4431D9FE877006BFD6E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CC89B4441D9FE897006BFD6E /* DataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		CC89B4461D9FE8B6006BFD6E /* Configuration */ = {
@@ -212,6 +223,7 @@
 			files = (
 				CC89B4481D9FE8D3006BFD6E /* Configuration.swift in Sources */,
 				CC89B4391D9FE3D0006BFD6E /* RootViewController.swift in Sources */,
+				CC89B4451D9FE897006BFD6E /* DataManager.swift in Sources */,
 				CC89B4381D9FE3D0006BFD6E /* AppDelegate.swift in Sources */,
 				CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */,
 				CC89B4401D9FE5BC006BFD6E /* DayViewController.swift in Sources */,
