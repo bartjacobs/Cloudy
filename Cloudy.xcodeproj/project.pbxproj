@@ -14,6 +14,7 @@
 		CC89B43D1D9FE3D0006BFD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC89B4371D9FE3D0006BFD6E /* Main.storyboard */; };
 		CC89B4401D9FE5BC006BFD6E /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */; };
 		CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */; };
+		CC89B4481D9FE8D3006BFD6E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4471D9FE8D3006BFD6E /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CC89B4371D9FE3D0006BFD6E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
+		CC89B4471D9FE8D3006BFD6E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				CC89B42C1D9FE3D0006BFD6E /* Application Delegate */,
 				CC89B42E1D9FE3D0006BFD6E /* View Controllers */,
+				CC89B4461D9FE8B6006BFD6E /* Configuration */,
 				CC89B4351D9FE3D0006BFD6E /* Storyboards */,
 				CC89B4331D9FE3D0006BFD6E /* Resources */,
 				CC89B4311D9FE3D0006BFD6E /* Supporting Files */,
@@ -124,6 +127,14 @@
 				CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */,
 			);
 			path = "Weather View Controllers";
+			sourceTree = "<group>";
+		};
+		CC89B4461D9FE8B6006BFD6E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CC89B4471D9FE8D3006BFD6E /* Configuration.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC89B4481D9FE8D3006BFD6E /* Configuration.swift in Sources */,
 				CC89B4391D9FE3D0006BFD6E /* RootViewController.swift in Sources */,
 				CC89B4381D9FE3D0006BFD6E /* AppDelegate.swift in Sources */,
 				CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */,
