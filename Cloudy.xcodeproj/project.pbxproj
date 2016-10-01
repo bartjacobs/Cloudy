@@ -16,6 +16,7 @@
 		CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */; };
 		CC89B4451D9FE897006BFD6E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4441D9FE897006BFD6E /* DataManager.swift */; };
 		CC89B4481D9FE8D3006BFD6E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4471D9FE8D3006BFD6E /* Configuration.swift */; };
+		CC89B44C1D9FEB73006BFD6E /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		CC89B4441D9FE897006BFD6E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CC89B4471D9FE8D3006BFD6E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				CC89B4351D9FE3D0006BFD6E /* Storyboards */,
 				CC89B4331D9FE3D0006BFD6E /* Resources */,
 				CC89B4431D9FE877006BFD6E /* Managers */,
+				CC89B4491D9FEB36006BFD6E /* Protocols */,
 				CC89B4311D9FE3D0006BFD6E /* Supporting Files */,
 			);
 			path = Cloudy;
@@ -148,6 +151,14 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		CC89B4491D9FEB36006BFD6E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,6 +234,7 @@
 			files = (
 				CC89B4481D9FE8D3006BFD6E /* Configuration.swift in Sources */,
 				CC89B4391D9FE3D0006BFD6E /* RootViewController.swift in Sources */,
+				CC89B44C1D9FEB73006BFD6E /* JSONDecodable.swift in Sources */,
 				CC89B4451D9FE897006BFD6E /* DataManager.swift in Sources */,
 				CC89B4381D9FE3D0006BFD6E /* AppDelegate.swift in Sources */,
 				CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */,
