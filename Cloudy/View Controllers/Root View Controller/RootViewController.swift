@@ -20,12 +20,30 @@ class RootViewController: UIViewController {
     @IBOutlet private var dayViewController: DayViewController!
     @IBOutlet private var weekViewController: WeekViewController!
 
+    // MARK: -
+
+    private lazy var dataManager = {
+        return DataManager(baseURL: API.AuthenticatedBaseURL)
+    }()
+
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupView()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        dataManager.weatherDataForLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) { (response, error) in
+            if let error = error {
+                print(error)
+            } else if let response = response {
+                print(response)
+            }
+        }
     }
 
     // MARK: - Navigation
