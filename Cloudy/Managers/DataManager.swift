@@ -18,7 +18,7 @@ enum DataManagerError: Error {
 
 final class DataManager {
 
-    typealias WeatherDataCompletion = (AnyObject?, DataManagerError?) -> ()
+    typealias WeatherDataCompletion = (WeatherData?, DataManagerError?) -> ()
 
     // MARK: - Properties
 
@@ -39,7 +39,7 @@ final class DataManager {
         // Create Data Task
         URLSession.shared.dataTask(with: URL) { (data, response, error) in
             self.didFetchWeatherData(data: data, response: response, error: error, completion: completion)
-            }.resume()
+        }.resume()
     }
 
     // MARK: - Helper Methods
@@ -50,7 +50,18 @@ final class DataManager {
 
         } else if let data = data, let response = response as? HTTPURLResponse {
             if response.statusCode == 200 {
-                processWeatherData(data: data, completion: completion)
+                do {
+                    // Decode JSON
+                    let weatherData: WeatherData = try JSONDecoder.decode(data: data)
+
+                    // Invoke Completion Handler
+                    completion(weatherData, nil)
+
+                } catch {
+                    // Invoke Completion Handler
+                    completion(nil, .invalidResponse)
+                }
+
             } else {
                 completion(nil, .failedRequest)
             }
@@ -60,12 +71,4 @@ final class DataManager {
         }
     }
 
-    private func processWeatherData(data: Data, completion: WeatherDataCompletion) {
-        if let JSON = try? JSONSerialization.jsonObject(with: data, options: []) as AnyObject {
-            completion(JSON, nil)
-        } else {
-            completion(nil, .invalidResponse)
-        }
-    }
-    
 }
