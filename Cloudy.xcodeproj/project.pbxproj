@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC7854CD1D9FF99700E7836D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7854CC1D9FF99700E7836D /* WeatherViewController.swift */; };
 		CC89B4381D9FE3D0006BFD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B42D1D9FE3D0006BFD6E /* AppDelegate.swift */; };
 		CC89B4391D9FE3D0006BFD6E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4301D9FE3D0006BFD6E /* RootViewController.swift */; };
 		CC89B43B1D9FE3D0006BFD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC89B4341D9FE3D0006BFD6E /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC7854CC1D9FF99700E7836D /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		CC89B4171D9FE314006BFD6E /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC89B42D1D9FE3D0006BFD6E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC89B4301D9FE3D0006BFD6E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */,
 				CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */,
+				CC7854CC1D9FF99700E7836D /* WeatherViewController.swift */,
 			);
 			path = "Weather View Controllers";
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC89B4481D9FE8D3006BFD6E /* Configuration.swift in Sources */,
+				CC7854CD1D9FF99700E7836D /* WeatherViewController.swift in Sources */,
 				CC89B4391D9FE3D0006BFD6E /* RootViewController.swift in Sources */,
 				CC89B44C1D9FEB73006BFD6E /* JSONDecodable.swift in Sources */,
 				CC89B4451D9FE897006BFD6E /* DataManager.swift in Sources */,
@@ -397,6 +401,7 @@
 				CC89B42B1D9FE314006BFD6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
