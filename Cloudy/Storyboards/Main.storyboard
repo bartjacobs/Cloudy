@@ -17,12 +17,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VZ-Nc-bLZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="cAe-gA-yQX"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="AzE-7x-bFo" kind="embed" identifier="SegueDayView" id="svf-AV-u85"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OW3-pI-vqt">
+                                <connections>
+                                    <segue destination="kFf-S5-7AW" kind="embed" identifier="SegueWeekView" id="B56-fy-q3D"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OW3-pI-vqt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gbi-k0-j72"/>
+                            <constraint firstAttribute="trailing" secondItem="3VZ-Nc-bLZ" secondAttribute="trailing" id="GvJ-6y-PWh"/>
+                            <constraint firstItem="3VZ-Nc-bLZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Hdi-S0-rrE"/>
+                            <constraint firstItem="OW3-pI-vqt" firstAttribute="top" secondItem="3VZ-Nc-bLZ" secondAttribute="bottom" id="Ptm-fH-JBP"/>
+                            <constraint firstAttribute="trailing" secondItem="OW3-pI-vqt" secondAttribute="trailing" id="dxi-19-4w7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OW3-pI-vqt" secondAttribute="bottom" id="j7L-Nl-xg3"/>
+                            <constraint firstItem="3VZ-Nc-bLZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r1S-rQ-vbI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-86" y="102"/>
+            <point key="canvasLocation" x="-180" y="81.409295352323838"/>
+        </scene>
+        <!--Day View Controller-->
+        <scene sceneID="sS9-Pp-vhd">
+            <objects>
+                <viewController id="AzE-7x-bFo" customClass="DayViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M6a-yH-Gbk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H1Y-UZ-H0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="81"/>
+        </scene>
+        <!--Week View Controller-->
+        <scene sceneID="Cxg-2W-oMH">
+            <objects>
+                <viewController id="kFf-S5-7AW" customClass="WeekViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iW3-QK-flJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKC-BL-jti" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="738"/>
         </scene>
     </scenes>
 </document>

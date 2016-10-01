@@ -12,6 +12,8 @@
 		CC89B43B1D9FE3D0006BFD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC89B4341D9FE3D0006BFD6E /* Assets.xcassets */; };
 		CC89B43C1D9FE3D0006BFD6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC89B4361D9FE3D0006BFD6E /* LaunchScreen.storyboard */; };
 		CC89B43D1D9FE3D0006BFD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC89B4371D9FE3D0006BFD6E /* Main.storyboard */; };
+		CC89B4401D9FE5BC006BFD6E /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */; };
+		CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CC89B4341D9FE3D0006BFD6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC89B4361D9FE3D0006BFD6E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC89B4371D9FE3D0006BFD6E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				CC89B42F1D9FE3D0006BFD6E /* Root View Controller */,
+				CC89B43E1D9FE58C006BFD6E /* Weather View Controllers */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -110,6 +115,15 @@
 				CC89B4361D9FE3D0006BFD6E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CC89B43E1D9FE58C006BFD6E /* Weather View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */,
+				CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */,
+			);
+			path = "Weather View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,8 @@
 			files = (
 				CC89B4391D9FE3D0006BFD6E /* RootViewController.swift in Sources */,
 				CC89B4381D9FE3D0006BFD6E /* AppDelegate.swift in Sources */,
+				CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */,
+				CC89B4401D9FE5BC006BFD6E /* DayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
