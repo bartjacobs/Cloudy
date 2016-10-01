@@ -8,7 +8,15 @@
 
 import UIKit
 
-class DayViewController: UIViewController {
+class DayViewController: WeatherViewController {
+
+    // MARK: - Properties
+
+    var now: WeatherData? {
+        didSet {
+            updateView()
+        }
+    }
 
     // MARK: - View Life Cycle
 
@@ -25,7 +33,15 @@ class DayViewController: UIViewController {
     }
 
     private func updateView() {
-        
+        activityIndicatorView.stopAnimating()
+
+        if let _ = now {
+
+        } else {
+            messageLabel.isHidden = false
+            messageLabel.text = "Cloudy was unable to fetch weather data."
+
+        }
     }
     
 }

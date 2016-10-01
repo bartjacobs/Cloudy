@@ -38,7 +38,9 @@ final class DataManager {
 
         // Create Data Task
         URLSession.shared.dataTask(with: URL) { (data, response, error) in
-            self.didFetchWeatherData(data: data, response: response, error: error, completion: completion)
+            DispatchQueue.main.async {
+                self.didFetchWeatherData(data: data, response: response, error: error, completion: completion)
+            }
         }.resume()
     }
 

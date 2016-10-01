@@ -8,8 +8,16 @@
 
 import UIKit
 
-class WeekViewController: UIViewController {
+class WeekViewController: WeatherViewController {
 
+    // MARK: - Properties
+
+    var week: [WeatherDayData]? {
+        didSet {
+            updateView()
+        }
+    }
+    
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
@@ -25,7 +33,15 @@ class WeekViewController: UIViewController {
     }
 
     private func updateView() {
-        
+        activityIndicatorView.stopAnimating()
+
+        if let _ = week {
+
+        } else {
+            messageLabel.isHidden = false
+            messageLabel.text = "Cloudy was unable to fetch weather data."
+            
+        }
     }
     
 }

@@ -52,29 +52,75 @@
         <scene sceneID="sS9-Pp-vhd">
             <objects>
                 <viewController id="AzE-7x-bFo" customClass="DayViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nP6-LM-LNV"/>
+                        <viewControllerLayoutGuide type="bottom" id="ICJ-Ui-hIU"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M6a-yH-Gbk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ye9-6J-vx3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ww-3T-lGw">
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Ww-3T-lGw" firstAttribute="leading" secondItem="M6a-yH-Gbk" secondAttribute="leading" constant="16" id="DUd-br-eyf"/>
+                            <constraint firstItem="Ye9-6J-vx3" firstAttribute="centerX" secondItem="M6a-yH-Gbk" secondAttribute="centerX" id="OkK-3Q-keh"/>
+                            <constraint firstItem="Ye9-6J-vx3" firstAttribute="centerY" secondItem="M6a-yH-Gbk" secondAttribute="centerY" id="aB9-Mc-KPE"/>
+                            <constraint firstItem="4Ww-3T-lGw" firstAttribute="centerY" secondItem="M6a-yH-Gbk" secondAttribute="centerY" id="kUD-Ht-ovk"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ww-3T-lGw" secondAttribute="trailing" constant="16" id="oiI-8i-oMk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="Ye9-6J-vx3" id="NcL-6v-0Mm"/>
+                        <outlet property="messageLabel" destination="4Ww-3T-lGw" id="1Hy-vA-d84"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1Y-UZ-H0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="81"/>
+            <point key="canvasLocation" x="680.79999999999995" y="80.959520239880064"/>
         </scene>
         <!--Week View Controller-->
         <scene sceneID="Cxg-2W-oMH">
             <objects>
                 <viewController id="kFf-S5-7AW" customClass="WeekViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hpn-tU-juB"/>
+                        <viewControllerLayoutGuide type="bottom" id="vMf-ro-l5e"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iW3-QK-flJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="frc-lh-hOs"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovK-UP-PPR">
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ovK-UP-PPR" secondAttribute="trailing" constant="16" id="ESJ-lf-YW1"/>
+                            <constraint firstItem="frc-lh-hOs" firstAttribute="centerY" secondItem="iW3-QK-flJ" secondAttribute="centerY" id="IdT-AY-vit"/>
+                            <constraint firstItem="ovK-UP-PPR" firstAttribute="centerY" secondItem="iW3-QK-flJ" secondAttribute="centerY" id="gOH-kB-vhF"/>
+                            <constraint firstItem="frc-lh-hOs" firstAttribute="centerX" secondItem="iW3-QK-flJ" secondAttribute="centerX" id="hbL-bB-Wm7"/>
+                            <constraint firstItem="ovK-UP-PPR" firstAttribute="leading" secondItem="iW3-QK-flJ" secondAttribute="leading" constant="16" id="mmo-Mn-Yf2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="frc-lh-hOs" id="2jQ-8q-BNo"/>
+                        <outlet property="messageLabel" destination="ovK-UP-PPR" id="70Y-7X-2zs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKC-BL-jti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="738"/>
+            <point key="canvasLocation" x="-180" y="737.18140929535241"/>
         </scene>
     </scenes>
 </document>
