@@ -17,6 +17,8 @@
 		CC89B4451D9FE897006BFD6E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4441D9FE897006BFD6E /* DataManager.swift */; };
 		CC89B4481D9FE8D3006BFD6E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4471D9FE8D3006BFD6E /* Configuration.swift */; };
 		CC89B44C1D9FEB73006BFD6E /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */; };
+		CC89B4501D9FEC2E006BFD6E /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B44F1D9FEC2E006BFD6E /* WeatherData.swift */; };
+		CC89B4521D9FECBE006BFD6E /* WeatherDayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CC89B4441D9FE897006BFD6E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CC89B4471D9FE8D3006BFD6E /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		CC89B44F1D9FEC2E006BFD6E /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDayData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				CC89B4331D9FE3D0006BFD6E /* Resources */,
 				CC89B4431D9FE877006BFD6E /* Managers */,
 				CC89B4491D9FEB36006BFD6E /* Protocols */,
+				CC89B44E1D9FEC04006BFD6E /* Models */,
 				CC89B4311D9FE3D0006BFD6E /* Supporting Files */,
 			);
 			path = Cloudy;
@@ -159,6 +164,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		CC89B44E1D9FEC04006BFD6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC89B44F1D9FEC2E006BFD6E /* WeatherData.swift */,
+				CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,7 +251,9 @@
 				CC89B44C1D9FEB73006BFD6E /* JSONDecodable.swift in Sources */,
 				CC89B4451D9FE897006BFD6E /* DataManager.swift in Sources */,
 				CC89B4381D9FE3D0006BFD6E /* AppDelegate.swift in Sources */,
+				CC89B4521D9FECBE006BFD6E /* WeatherDayData.swift in Sources */,
 				CC89B4421D9FE5C6006BFD6E /* WeekViewController.swift in Sources */,
+				CC89B4501D9FEC2E006BFD6E /* WeatherData.swift in Sources */,
 				CC89B4401D9FE5BC006BFD6E /* DayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
