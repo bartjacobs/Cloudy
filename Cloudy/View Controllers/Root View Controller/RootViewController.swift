@@ -41,7 +41,6 @@ class RootViewController: UIViewController {
             if let error = error {
                 print(error)
             } else if let response = response {
-                print(response)
                 self.dayViewController.now = response
                 self.weekViewController.week = response.dailyData
             }
