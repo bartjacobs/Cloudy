@@ -12,6 +12,15 @@ class DayViewController: WeatherViewController {
 
     // MARK: - Properties
 
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var windSpeedLabel: UILabel!
+    @IBOutlet var temperatureLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var iconImageView: UIImageView!
+
+    // MARK: -
+
     var now: WeatherData? {
         didSet {
             updateView()
@@ -35,7 +44,8 @@ class DayViewController: WeatherViewController {
     private func updateView() {
         activityIndicatorView.stopAnimating()
 
-        if let _ = now {
+        if let now = now {
+            updateWeatherDataContainer(withWeatherData: now)
 
         } else {
             messageLabel.isHidden = false
@@ -43,5 +53,23 @@ class DayViewController: WeatherViewController {
 
         }
     }
-    
+
+    // MARK: -
+
+    private func updateWeatherDataContainer(withWeatherData weatherData: WeatherData) {
+        weatherDataContainer.isHidden = false
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, MMM d"
+        dateLabel.text = dateFormatter.string(from: weatherData.time)
+
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm:ss"
+        timeLabel.text = timeFormatter.string(from: weatherData.time)
+
+        descriptionLabel.text = weatherData.summary
+        windSpeedLabel.text = String(format: "%.f MPH", weatherData.windSpeed)
+        temperatureLabel.text = String(format: "%.1f °F", weatherData.temperature)
+    }
+
 }
