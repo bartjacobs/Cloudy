@@ -70,6 +70,8 @@ class DayViewController: WeatherViewController {
         descriptionLabel.text = weatherData.summary
         windSpeedLabel.text = String(format: "%.f MPH", weatherData.windSpeed)
         temperatureLabel.text = String(format: "%.1f °F", weatherData.temperature)
+
+        iconImageView.image = imageForIcon(withName: weatherData.icon)
     }
 
 }

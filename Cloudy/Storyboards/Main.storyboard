@@ -94,7 +94,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dkw-ig-jHH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dkw-ig-jHH">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Dkw-ig-jHH" secondAttribute="height" multiplier="1:1" id="oJy-lJ-Thm"/>
                                         </constraints>
@@ -114,7 +114,7 @@
                                     <constraint firstAttribute="trailing" secondItem="69r-DN-osz" secondAttribute="trailing" constant="20" id="fY1-QO-1hO"/>
                                     <constraint firstItem="iuQ-KD-Muj" firstAttribute="leading" secondItem="mPP-3X-fdy" secondAttribute="leading" constant="20" id="lyv-53-yIk"/>
                                     <constraint firstItem="Uxg-dW-5us" firstAttribute="leading" secondItem="mPP-3X-fdy" secondAttribute="leading" constant="20" id="m3V-xH-ctT"/>
-                                    <constraint firstAttribute="bottom" secondItem="iuQ-KD-Muj" secondAttribute="bottom" constant="20" id="oYz-OH-Fmi"/>
+                                    <constraint firstAttribute="bottom" secondItem="iuQ-KD-Muj" secondAttribute="bottom" constant="8" id="oYz-OH-Fmi"/>
                                     <constraint firstItem="Uxg-dW-5us" firstAttribute="top" secondItem="mPP-3X-fdy" secondAttribute="top" constant="20" id="qwG-mk-NIp"/>
                                     <constraint firstItem="69r-DN-osz" firstAttribute="top" secondItem="mPP-3X-fdy" secondAttribute="top" constant="20" id="vLE-m1-mnR"/>
                                     <constraint firstItem="G3S-SZ-pzM" firstAttribute="centerY" secondItem="Dkw-ig-jHH" secondAttribute="centerY" id="x5y-Dg-rOY"/>
@@ -196,7 +196,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzK-L8-KnD">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nzK-L8-KnD">
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="60" id="2vp-hr-R8s"/>
                                                                 <constraint firstAttribute="width" constant="60" id="qLg-td-JtA"/>
