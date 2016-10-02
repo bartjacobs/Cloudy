@@ -11,7 +11,7 @@ import Foundation
 struct WeatherDayData {
 
     let time: Date
-    let windSpeed: Int
+    let windSpeed: Double
     let precipitation: Double
     let temperatureMin: Double
     let temperatureMax: Double
