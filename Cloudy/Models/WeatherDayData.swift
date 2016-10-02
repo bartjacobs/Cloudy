@@ -11,8 +11,8 @@ import Foundation
 struct WeatherDayData {
 
     let time: Date
+    let icon: String
     let windSpeed: Double
-    let precipitation: Double
     let temperatureMin: Double
     let temperatureMax: Double
 
@@ -21,8 +21,8 @@ struct WeatherDayData {
 extension WeatherDayData: JSONDecodable {
 
     init(decoder: JSONDecoder) throws {
+        self.icon = try decoder.decode(key: "icon")
         self.windSpeed = try decoder.decode(key: "windSpeed")
-        self.precipitation = try decoder.decode(key: "precipIntensity")
         self.temperatureMin = try decoder.decode(key: "temperatureMin")
         self.temperatureMax = try decoder.decode(key: "temperatureMax")
 
