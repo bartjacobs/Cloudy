@@ -44,6 +44,12 @@ class WeekViewController: WeatherViewController {
         setupView()
     }
 
+    // MARK: - Public Interface
+
+    override func reloadData() {
+        updateView()
+    }
+    
     // MARK: - View Methods
 
     private func setupView() {
@@ -97,15 +103,30 @@ extension WeekViewController: UITableViewDataSource {
             // Fetch Weather Data
             let weatherData = week[indexPath.row]
 
+            var windSpeed = weatherData.windSpeed
+            var temperatureMin = weatherData.temperatureMin
+            var temperatureMax = weatherData.temperatureMax
+
+            if UserDefaults.temperatureNotation() != .fahrenheit {
+                temperatureMin = temperatureMin.toCelcius()
+                temperatureMax = temperatureMax.toCelcius()
+            }
+
             // Configure Cell
             cell.dayLabel.text = dayFormatter.string(from: weatherData.time)
             cell.dateLabel.text = dateFormatter.string(from: weatherData.time)
 
-            let min = String(format: "%.0f°", weatherData.temperatureMin)
-            let max = String(format: "%.0f°", weatherData.temperatureMax)
+            let min = String(format: "%.0f°", temperatureMin)
+            let max = String(format: "%.0f°", temperatureMax)
+
             cell.temperatureLabel.text = "\(min) - \(max)"
 
-            cell.windSpeedLabel.text = String(format: "%.f MPH", weatherData.windSpeed)
+            if UserDefaults.unitsNotation() != .imperial {
+                windSpeed = windSpeed.toKPH()
+                cell.windSpeedLabel.text = String(format: "%.f KPH", windSpeed)
+            } else {
+                cell.windSpeedLabel.text = String(format: "%.f MPH", windSpeed)
+            }
 
             cell.iconImageView.image = imageForIcon(withName: weatherData.icon)
         }

@@ -24,6 +24,12 @@ class WeatherViewController: UIViewController {
         setupView()
     }
 
+    // MARK: - Public Interface
+
+    func reloadData() {
+        
+    }
+
     // MARK: - View Methods
 
     private func setupView() {

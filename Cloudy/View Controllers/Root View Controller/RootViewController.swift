@@ -18,8 +18,8 @@ class RootViewController: UIViewController {
 
     // MARK: - Properties
 
-    @IBOutlet private var dayViewController: DayViewController!
-    @IBOutlet private var weekViewController: WeekViewController!
+    @IBOutlet fileprivate var dayViewController: DayViewController!
+    @IBOutlet fileprivate var weekViewController: WeekViewController!
 
     // MARK: -
 
@@ -110,15 +110,18 @@ extension RootViewController: DayViewControllerDelegate {
 extension RootViewController: SettingsViewControllerDelegate {
 
     func controllerDidChangeTimeNotation(controller: SettingsViewController) {
-        print(#function)
+        dayViewController.reloadData()
+        weekViewController.reloadData()
     }
 
     func controllerDidChangeUnitsNotation(controller: SettingsViewController) {
-        print(#function)
+        dayViewController.reloadData()
+        weekViewController.reloadData()
     }
 
     func controllerDidChangeTemperatureNotation(controller: SettingsViewController) {
-        print(#function)
+        dayViewController.reloadData()
+        weekViewController.reloadData()
     }
 
 }

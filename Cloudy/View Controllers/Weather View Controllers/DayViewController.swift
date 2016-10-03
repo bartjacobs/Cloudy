@@ -43,6 +43,12 @@ class DayViewController: WeatherViewController {
         setupView()
     }
 
+    // MARK: - Public Interface
+
+    override func reloadData() {
+        updateView()
+    }
+
     // MARK: - View Methods
 
     private func setupView() {
@@ -67,17 +73,38 @@ class DayViewController: WeatherViewController {
     private func updateWeatherDataContainer(withWeatherData weatherData: WeatherData) {
         weatherDataContainer.isHidden = false
 
+        var windSpeed = weatherData.windSpeed
+        var temperature = weatherData.temperature
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE, MMM d"
         dateLabel.text = dateFormatter.string(from: weatherData.time)
 
         let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "HH:mm:ss"
+
+        if UserDefaults.timeNotation() == .twelveHour {
+            timeFormatter.dateFormat = "hh:mm a"
+        } else {
+            timeFormatter.dateFormat = "HH:mm"
+        }
+
         timeLabel.text = timeFormatter.string(from: weatherData.time)
 
         descriptionLabel.text = weatherData.summary
-        windSpeedLabel.text = String(format: "%.f MPH", weatherData.windSpeed)
-        temperatureLabel.text = String(format: "%.1f °F", weatherData.temperature)
+
+        if UserDefaults.temperatureNotation() != .fahrenheit {
+            temperature = temperature.toCelcius()
+            temperatureLabel.text = String(format: "%.1f °C", temperature)
+        } else {
+            temperatureLabel.text = String(format: "%.1f °F", temperature)
+        }
+
+        if UserDefaults.unitsNotation() != .imperial {
+            windSpeed = windSpeed.toKPH()
+            windSpeedLabel.text = String(format: "%.f KPH", windSpeed)
+        } else {
+            windSpeedLabel.text = String(format: "%.f MPH", windSpeed)
+        }
 
         iconImageView.image = imageForIcon(withName: weatherData.icon)
     }
