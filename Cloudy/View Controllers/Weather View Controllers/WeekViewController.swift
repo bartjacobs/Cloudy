@@ -54,10 +54,12 @@ class WeekViewController: WeatherViewController {
 
     private func setupView() {
         setupTableView()
+        setupRefreshControl()
     }
 
     private func updateView() {
         activityIndicatorView.stopAnimating()
+        tableView.refreshControl?.endRefreshing()
 
         if let week = week {
             updateWeatherDataContainer(withWeatherData: week)
@@ -75,12 +77,29 @@ class WeekViewController: WeatherViewController {
         tableView.separatorInset = UIEdgeInsets.zero
     }
 
+    private func setupRefreshControl() {
+        // Initialize Refresh Control
+        let refreshControl = UIRefreshControl()
+
+        // Configure Refresh Control
+        refreshControl.addTarget(self, action: #selector(WeekViewController.didRefresh(sender:)), for: .valueChanged)
+
+        // Update Table View)
+        tableView.refreshControl = refreshControl
+    }
+
     // MARK: -
 
     private func updateWeatherDataContainer(withWeatherData weatherData: [WeatherDayData]) {
         weatherDataContainer.isHidden = false
 
         tableView.reloadData()
+    }
+
+    // MARK: - Actions
+
+    func didRefresh(sender: UIRefreshControl) {
+        print(#function);
     }
     
 }
