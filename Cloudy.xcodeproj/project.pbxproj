@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC08B9DB1DA206EE00754A85 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC08B9DA1DA206EE00754A85 /* SettingsViewController.swift */; };
 		CC63745E1DA0F557002E68DC /* WeatherDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC63745D1DA0F557002E68DC /* WeatherDayTableViewCell.swift */; };
 		CC7854CD1D9FF99700E7836D /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7854CC1D9FF99700E7836D /* WeatherViewController.swift */; };
 		CC89B4381D9FE3D0006BFD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B42D1D9FE3D0006BFD6E /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC08B9DA1DA206EE00754A85 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CC63745D1DA0F557002E68DC /* WeatherDayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDayTableViewCell.swift; sourceTree = "<group>"; };
 		CC7854CC1D9FF99700E7836D /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		CC89B4171D9FE314006BFD6E /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC08B9D91DA206C300754A85 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC08B9DA1DA206EE00754A85 /* SettingsViewController.swift */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
 		CC63745C1DA0F535002E68DC /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				CC89B42F1D9FE3D0006BFD6E /* Root View Controller */,
+				CC08B9D91DA206C300754A85 /* SettingsViewController */,
 				CC89B43E1D9FE58C006BFD6E /* Weather View Controllers */,
 			);
 			path = "View Controllers";
@@ -271,6 +282,7 @@
 				CC89B4501D9FEC2E006BFD6E /* WeatherData.swift in Sources */,
 				CC63745E1DA0F557002E68DC /* WeatherDayTableViewCell.swift in Sources */,
 				CC89B4401D9FE5BC006BFD6E /* DayViewController.swift in Sources */,
+				CC08B9DB1DA206EE00754A85 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@ class RootViewController: UIViewController {
 
     private let segueDayView = "SegueDayView"
     private let segueWeekView = "SegueWeekView"
+    fileprivate let SegueSettingsView = "SegueSettingsView"
 
     // MARK: - Properties
 
@@ -83,12 +84,18 @@ class RootViewController: UIViewController {
 
     }
 
+    // MARK: - Actions
+
+    @IBAction func unwindToRootViewController(segue: UIStoryboardSegue) {
+        
+    }
+
 }
 
 extension RootViewController: DayViewControllerDelegate {
 
     func controllerDidTapSettingsButton(controller: DayViewController) {
-        print("open settings")
+        performSegue(withIdentifier: SegueSettingsView, sender: self)
     }
 
 }

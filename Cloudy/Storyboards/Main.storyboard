@@ -6,6 +6,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="wu0-a8-dlq">
+            <objects>
+                <viewController id="PUU-db-REJ" customClass="SettingsViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="01w-Ch-840"/>
+                        <viewControllerLayoutGuide type="bottom" id="hZv-bN-cw1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ma4-T1-C59">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iSj-LK-xe3">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iSj-LK-xe3" firstAttribute="leading" secondItem="ma4-T1-C59" secondAttribute="leading" id="4pD-1e-JoG"/>
+                            <constraint firstAttribute="trailing" secondItem="iSj-LK-xe3" secondAttribute="trailing" id="cJI-nQ-QLi"/>
+                            <constraint firstItem="iSj-LK-xe3" firstAttribute="top" secondItem="ma4-T1-C59" secondAttribute="top" id="gGv-LU-NEi"/>
+                            <constraint firstItem="hZv-bN-cw1" firstAttribute="top" secondItem="iSj-LK-xe3" secondAttribute="bottom" id="uuN-bw-4Fn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d9W-4q-kiX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="zdQ-u5-3vZ">
+                            <connections>
+                                <segue destination="AqP-io-VjE" kind="unwind" unwindAction="unwindToRootViewControllerWithSegue:" id="vSl-Ni-ebw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SH1-6a-qzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="AqP-io-VjE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1344.8" y="80.50974512743629"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -43,6 +80,9 @@
                             <constraint firstItem="3VZ-Nc-bLZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="r1S-rQ-vbI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="mSF-DT-ege" kind="presentation" identifier="SegueSettingsView" id="RWb-o0-o8v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H1Y-UZ-H0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680.79999999999995" y="80.959520239880064"/>
+            <point key="canvasLocation" x="-180" y="1111"/>
         </scene>
         <!--Week View Controller-->
         <scene sceneID="Cxg-2W-oMH">
@@ -293,7 +333,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKC-BL-jti" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="737.18140929535241"/>
+            <point key="canvasLocation" x="-180" y="725"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2id-Iy-gkN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mSF-DT-ege" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ffq-if-nQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PUU-db-REJ" kind="relationship" relationship="rootViewController" id="cEY-Mr-1N0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0v2-1z-VJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591" y="81"/>
         </scene>
     </scenes>
     <resources>
