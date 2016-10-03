@@ -39,7 +39,6 @@ class RootViewController: UIViewController {
         let locationManager = CLLocationManager()
 
         // Configure Location Manager
-        locationManager.delegate = self
         locationManager.distanceFilter = 1000.0
         locationManager.desiredAccuracy = 1000.0
 
@@ -52,19 +51,7 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
 
         setupView()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            // Request Current Location
-            locationManager.requestLocation()
-
-        } else {
-            // Request Authorization
-            locationManager.requestWhenInUseAuthorization()
-        }
+        setupNotificationHandling()
     }
 
     // MARK: - Navigation
@@ -120,12 +107,42 @@ class RootViewController: UIViewController {
         
     }
 
+    // MARK: - Notification Handling
+
+    func applicationDidBecomeActive(notification: Notification) {
+        requestLocation()
+    }
+
     // MARK: - Helper Methods
+
+    private func setupNotificationHandling() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(RootViewController.applicationDidBecomeActive(notification:)), name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
+    }
+
+    private func requestLocation() {
+        // Configure Location Manager
+        locationManager.delegate = self
+
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            // Request Current Location
+            locationManager.requestLocation()
+
+        } else {
+            // Request Authorization
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
 
     fileprivate func fetchWeatherData() {
         guard let location = currentLocation else { return }
 
-        dataManager.weatherDataForLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) { (response, error) in
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+
+        print("\(latitude), \(longitude)")
+
+        dataManager.weatherDataForLocation(latitude: latitude, longitude: longitude) { (response, error) in
             if let error = error {
                 print(error)
             } else if let response = response {
@@ -160,6 +177,12 @@ extension RootViewController: CLLocationManagerDelegate {
         if let location = locations.first {
             // Update Current Location
             currentLocation = location
+
+            // Reset Delegate
+            manager.delegate = nil
+
+            // Stop Location Manager
+            manager.stopUpdatingLocation()
 
         } else {
             // Fall Back to Default Location
