@@ -26,6 +26,9 @@ class WeatherDayTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        // Configure Cell
+        selectionStyle = .none
     }
 
 }
