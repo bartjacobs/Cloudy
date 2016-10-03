@@ -86,7 +86,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
 
         switch section {
         case .time:
-            cell.mainLabel.text = (indexPath.row == 0) ? "24 Hour" : "12 Hour"
+            cell.mainLabel.text = (indexPath.row == 0) ? "12 Hour" : "24 Hour"
 
             let timeNotation = UserDefaults.timeNotation()
             if indexPath.row == timeNotation.rawValue {
