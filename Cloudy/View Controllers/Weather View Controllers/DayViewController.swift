@@ -77,7 +77,7 @@ class DayViewController: WeatherViewController {
         var temperature = weatherData.temperature
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEE, MMM d"
+        dateFormatter.dateFormat = "EEE, MMMM d"
         dateLabel.text = dateFormatter.string(from: weatherData.time)
 
         let timeFormatter = DateFormatter()
