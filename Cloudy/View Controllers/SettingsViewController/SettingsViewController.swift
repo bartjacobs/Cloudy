@@ -8,11 +8,21 @@
 
 import UIKit
 
+protocol SettingsViewControllerDelegate {
+    func controllerDidChangeTimeNotation(controller: SettingsViewController)
+    func controllerDidChangeUnitsNotation(controller: SettingsViewController)
+    func controllerDidChangeTemperatureNotation(controller: SettingsViewController)
+}
+
 class SettingsViewController: UIViewController {
 
     // MARK: - Properties
 
     @IBOutlet var tableView: UITableView!
+
+    // MARK: -
+
+    var delegate: SettingsViewControllerDelegate?
 
     // MARK: - View Life Cycle
 
@@ -120,21 +130,33 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
             guard indexPath.row != timeNotation.rawValue else { return }
 
             if let newTimeNotation = TimeNotation(rawValue: indexPath.row) {
+                // Update User Defaults
                 UserDefaults.setTimeNotation(timeNotation: newTimeNotation)
+
+                // Notify Delegate
+                delegate?.controllerDidChangeTimeNotation(controller: self)
             }
         case .units:
             let unitsNotation = UserDefaults.unitsNotation()
             guard indexPath.row != unitsNotation.rawValue else { return }
 
             if let newUnitsNotation = UnitsNotation(rawValue: indexPath.row) {
+                // Update User Defaults
                 UserDefaults.setUnitsNotation(unitsNotation: newUnitsNotation)
+
+                // Notify Delegate
+                delegate?.controllerDidChangeUnitsNotation(controller: self)
             }
         case .temperature:
             let temperatureNotation = UserDefaults.temperatureNotation()
             guard indexPath.row != temperatureNotation.rawValue else { return }
 
             if let newTemperatureNotation = TemperatureNotation(rawValue: indexPath.row) {
+                // Update User Defaults
                 UserDefaults.setTemperatureNotation(temperatureNotation: newTemperatureNotation)
+
+                // Notify Delegate
+                delegate?.controllerDidChangeTemperatureNotation(controller: self)
             }
         }
 

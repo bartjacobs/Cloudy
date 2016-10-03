@@ -70,6 +70,13 @@ class RootViewController: UIViewController {
             } else {
                 fatalError("Unexpected Destination View Controller")
             }
+        case SegueSettingsView:
+            if let navigationController = segue.destination as? UINavigationController,
+               let settingsViewController = navigationController.topViewController as? SettingsViewController {
+                settingsViewController.delegate = self
+            } else {
+                fatalError("Unexpected Destination View Controller")
+            }
         default: break
         }
     }
@@ -96,6 +103,22 @@ extension RootViewController: DayViewControllerDelegate {
 
     func controllerDidTapSettingsButton(controller: DayViewController) {
         performSegue(withIdentifier: SegueSettingsView, sender: self)
+    }
+
+}
+
+extension RootViewController: SettingsViewControllerDelegate {
+
+    func controllerDidChangeTimeNotation(controller: SettingsViewController) {
+        print(#function)
+    }
+
+    func controllerDidChangeUnitsNotation(controller: SettingsViewController) {
+        print(#function)
+    }
+
+    func controllerDidChangeTemperatureNotation(controller: SettingsViewController) {
+        print(#function)
     }
 
 }
