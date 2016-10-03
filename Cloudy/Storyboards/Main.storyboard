@@ -99,6 +99,16 @@
                                             <constraint firstAttribute="height" constant="120" id="iDa-EL-hve"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcf-Yd-bGB">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="N32-ty-bpG"/>
+                                            <constraint firstAttribute="height" constant="44" id="SGO-fn-afm"/>
+                                        </constraints>
+                                        <state key="normal" image="button-settings-normal"/>
+                                        <connections>
+                                            <action selector="didTapSettingsButtonWithSender:" destination="AzE-7x-bFo" eventType="touchUpInside" id="nxb-B7-HaO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -106,6 +116,7 @@
                                     <constraint firstItem="G3S-SZ-pzM" firstAttribute="leading" secondItem="Dkw-ig-jHH" secondAttribute="trailing" constant="8" id="6LW-Vi-Qbc"/>
                                     <constraint firstItem="Dkw-ig-jHH" firstAttribute="leading" secondItem="Uxg-dW-5us" secondAttribute="trailing" constant="8" id="8rJ-nn-v7p"/>
                                     <constraint firstItem="Dkw-ig-jHH" firstAttribute="centerX" secondItem="mPP-3X-fdy" secondAttribute="centerX" id="Dfi-YA-56o"/>
+                                    <constraint firstAttribute="trailing" secondItem="mcf-Yd-bGB" secondAttribute="trailing" constant="4" id="EJG-ja-yvL"/>
                                     <constraint firstItem="iuQ-KD-Muj" firstAttribute="top" secondItem="Dkw-ig-jHH" secondAttribute="bottom" id="Ghj-BY-Yp3"/>
                                     <constraint firstItem="yNM-Yz-MY8" firstAttribute="leading" secondItem="mPP-3X-fdy" secondAttribute="leading" constant="8" id="Oan-VR-GM1"/>
                                     <constraint firstAttribute="trailing" secondItem="iuQ-KD-Muj" secondAttribute="trailing" constant="20" id="V2R-40-4GH"/>
@@ -119,6 +130,7 @@
                                     <constraint firstItem="Uxg-dW-5us" firstAttribute="leading" secondItem="mPP-3X-fdy" secondAttribute="leading" constant="8" id="m3V-xH-ctT"/>
                                     <constraint firstAttribute="bottom" secondItem="iuQ-KD-Muj" secondAttribute="bottom" constant="8" id="oYz-OH-Fmi"/>
                                     <constraint firstItem="Uxg-dW-5us" firstAttribute="top" secondItem="mPP-3X-fdy" secondAttribute="top" constant="8" id="qwG-mk-NIp"/>
+                                    <constraint firstItem="mcf-Yd-bGB" firstAttribute="top" secondItem="mPP-3X-fdy" secondAttribute="top" constant="4" id="uyY-pE-URy"/>
                                     <constraint firstItem="Dkw-ig-jHH" firstAttribute="centerY" secondItem="mPP-3X-fdy" secondAttribute="centerY" id="wPW-LI-LSe"/>
                                 </constraints>
                             </view>
@@ -185,10 +197,10 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WeatherDayCell" rowHeight="103" id="qOr-qh-iGB" customClass="WeatherDayTableViewCell" customModule="Cloudy" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="1000" height="103"/>
+                                                <rect key="frame" x="0.0" y="28" width="375" height="103"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qOr-qh-iGB" id="LhY-0E-8Uj">
-                                                    <frame key="frameInset" width="1000" height="103"/>
+                                                    <frame key="frameInset" width="375" height="103"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQ3-Tl-mkb">
@@ -284,4 +296,7 @@
             <point key="canvasLocation" x="-180" y="737.18140929535241"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button-settings-normal" width="28" height="28"/>
+    </resources>
 </document>

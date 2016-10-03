@@ -41,7 +41,11 @@ class RootViewController: UIViewController {
             if let error = error {
                 print(error)
             } else if let response = response {
+                // Configure Day View Controller
                 self.dayViewController.now = response
+                self.dayViewController.delegate = self
+
+                // Configure Week View Controller
                 self.weekViewController.week = response.dailyData
             }
         }
@@ -77,6 +81,14 @@ class RootViewController: UIViewController {
 
     private func updateView() {
 
+    }
+
+}
+
+extension RootViewController: DayViewControllerDelegate {
+
+    func controllerDidTapSettingsButton(controller: DayViewController) {
+        print("open settings")
     }
 
 }

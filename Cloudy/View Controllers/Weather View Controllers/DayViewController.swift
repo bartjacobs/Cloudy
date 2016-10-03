@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol DayViewControllerDelegate {
+    func controllerDidTapSettingsButton(controller: DayViewController)
+}
+
 class DayViewController: WeatherViewController {
 
     // MARK: - Properties
@@ -18,6 +22,10 @@ class DayViewController: WeatherViewController {
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var iconImageView: UIImageView!
+
+    // MARK: -
+
+    var delegate: DayViewControllerDelegate?
 
     // MARK: -
 
@@ -72,6 +80,12 @@ class DayViewController: WeatherViewController {
         temperatureLabel.text = String(format: "%.1f °F", weatherData.temperature)
 
         iconImageView.image = imageForIcon(withName: weatherData.icon)
+    }
+
+    // MARK: - Actions
+
+    @IBAction func didTapSettingsButton(sender: UIButton) {
+        delegate?.controllerDidTapSettingsButton(controller: self)
     }
 
 }
