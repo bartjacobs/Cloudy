@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class RootViewController: UIViewController {
 
@@ -23,8 +24,26 @@ class RootViewController: UIViewController {
 
     // MARK: -
 
+    fileprivate var currentLocation: CLLocation? {
+        didSet {
+            fetchWeatherData()
+        }
+    }
+
     fileprivate lazy var dataManager = {
         return DataManager(baseURL: API.AuthenticatedBaseURL)
+    }()
+
+    private lazy var locationManager: CLLocationManager = {
+        // Initialize Location Manager
+        let locationManager = CLLocationManager()
+
+        // Configure Location Manager
+        locationManager.delegate = self
+        locationManager.distanceFilter = 1000.0
+        locationManager.desiredAccuracy = 1000.0
+
+        return locationManager
     }()
 
     // MARK: - View Life Cycle
@@ -38,7 +57,14 @@ class RootViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        fetchWeatherData()
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            // Request Current Location
+            locationManager.requestLocation()
+
+        } else {
+            // Request Authorization
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
 
     // MARK: - Navigation
@@ -97,7 +123,9 @@ class RootViewController: UIViewController {
     // MARK: - Helper Methods
 
     fileprivate func fetchWeatherData() {
-        dataManager.weatherDataForLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) { (response, error) in
+        guard let location = currentLocation else { return }
+
+        dataManager.weatherDataForLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) { (response, error) in
             if let error = error {
                 print(error)
             } else if let response = response {
@@ -107,6 +135,44 @@ class RootViewController: UIViewController {
                 // Configure Week View Controller
                 self.weekViewController.week = response.dailyData
             }
+        }
+    }
+
+}
+
+extension RootViewController: CLLocationManagerDelegate {
+
+    // MARK: - Authorization
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            // Request Location
+            manager.requestLocation()
+
+        } else {
+            // Fall Back to Default Location
+            currentLocation = CLLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude)
+        }
+    }
+
+    // MARK: - Location Updates
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            // Update Current Location
+            currentLocation = location
+
+        } else {
+            // Fall Back to Default Location
+            currentLocation = CLLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude)
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+
+        if currentLocation == nil {
+            // Fall Back to Default Location
+            currentLocation = CLLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude)
         }
     }
 
