@@ -77,10 +77,31 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         switch section {
         case .time:
             cell.mainLabel.text = (indexPath.row == 0) ? "24 Hour" : "12 Hour"
+
+            let timeNotation = UserDefaults.timeNotation()
+            if indexPath.row == timeNotation.rawValue {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
         case .units:
             cell.mainLabel.text = (indexPath.row == 0) ? "Imperial" : "Metric"
+
+            let unitsNotation = UserDefaults.unitsNotation()
+            if indexPath.row == unitsNotation.rawValue {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
         case .temperature:
             cell.mainLabel.text = (indexPath.row == 0) ? "Fahrenheit" : "Celcius"
+
+            let temperatureNotation = UserDefaults.temperatureNotation()
+            if indexPath.row == temperatureNotation.rawValue {
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+            }
         }
 
         return cell
@@ -90,6 +111,34 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        guard let section = Section(rawValue: indexPath.section) else { fatalError("Unexpected Section") }
+
+        switch section {
+        case .time:
+            let timeNotation = UserDefaults.timeNotation()
+            guard indexPath.row != timeNotation.rawValue else { return }
+
+            if let newTimeNotation = TimeNotation(rawValue: indexPath.row) {
+                UserDefaults.setTimeNotation(timeNotation: newTimeNotation)
+            }
+        case .units:
+            let unitsNotation = UserDefaults.unitsNotation()
+            guard indexPath.row != unitsNotation.rawValue else { return }
+
+            if let newUnitsNotation = UnitsNotation(rawValue: indexPath.row) {
+                UserDefaults.setUnitsNotation(unitsNotation: newUnitsNotation)
+            }
+        case .temperature:
+            let temperatureNotation = UserDefaults.temperatureNotation()
+            guard indexPath.row != temperatureNotation.rawValue else { return }
+
+            if let newTemperatureNotation = TemperatureNotation(rawValue: indexPath.row) {
+                UserDefaults.setTemperatureNotation(temperatureNotation: newTemperatureNotation)
+            }
+        }
+
+        tableView.reloadSections(IndexSet(integer: indexPath.section), with: .none)
     }
 
 }
