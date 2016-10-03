@@ -147,7 +147,7 @@ class RootViewController: UIViewController {
                 print(error)
             } else if let response = response {
                 // Configure Day View Controller
-                self.dayViewController.now = response
+                self.dayViewController.viewModel = DayViewViewModel(weatherData: response)
 
                 // Configure Week View Controller
                 self.weekViewController.week = response.dailyData
