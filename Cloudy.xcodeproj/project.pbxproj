@@ -25,6 +25,8 @@
 		CC89B44C1D9FEB73006BFD6E /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */; };
 		CC89B4501D9FEC2E006BFD6E /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B44F1D9FEC2E006BFD6E /* WeatherData.swift */; };
 		CC89B4521D9FECBE006BFD6E /* WeatherDayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */; };
+		CCBE8CCD1DA29BE500EBC070 /* DayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */; };
+		CCBE8CCF1DA2A2B500EBC070 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		CC89B44F1D9FEC2E006BFD6E /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDayData.swift; sourceTree = "<group>"; };
+		CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
+		CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		CC08B9DF1DA2166B00754A85 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */,
 				CC08B9E21DA2208800754A85 /* Conversions.swift */,
 				CC08B9E01DA2169400754A85 /* UserDefaults.swift */,
 			);
@@ -185,6 +190,7 @@
 				CC89B43F1D9FE5BC006BFD6E /* DayViewController.swift */,
 				CC89B4411D9FE5C6006BFD6E /* WeekViewController.swift */,
 				CC7854CC1D9FF99700E7836D /* WeatherViewController.swift */,
+				CCBE8CCB1DA29A0E00EBC070 /* View Models */,
 				CC63745C1DA0F535002E68DC /* Table View Cells */,
 			);
 			path = "Weather View Controllers";
@@ -221,6 +227,14 @@
 				CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CCBE8CCB1DA29A0E00EBC070 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +316,8 @@
 				CC89B4391D9FE3D0006BFD6E /* RootViewController.swift in Sources */,
 				CC89B44C1D9FEB73006BFD6E /* JSONDecodable.swift in Sources */,
 				CC89B4451D9FE897006BFD6E /* DataManager.swift in Sources */,
+				CCBE8CCF1DA2A2B500EBC070 /* UIImage.swift in Sources */,
+				CCBE8CCD1DA29BE500EBC070 /* DayViewViewModel.swift in Sources */,
 				CC08B9DE1DA20DB400754A85 /* SettingsTableViewCell.swift in Sources */,
 				CC89B4381D9FE3D0006BFD6E /* AppDelegate.swift in Sources */,
 				CC89B4521D9FECBE006BFD6E /* WeatherDayData.swift in Sources */,
