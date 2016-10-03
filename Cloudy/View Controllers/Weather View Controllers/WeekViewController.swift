@@ -8,12 +8,20 @@
 
 import UIKit
 
+protocol WeekViewControllerDelegate {
+    func controllerDidRefresh(controller: WeekViewController)
+}
+
 class WeekViewController: WeatherViewController {
 
     // MARK: - Properties
 
     @IBOutlet var tableView: UITableView!
 
+    // MARK: -
+
+    var delegate: WeekViewControllerDelegate?
+    
     // MARK: -
 
     var week: [WeatherDayData]? {
@@ -99,7 +107,7 @@ class WeekViewController: WeatherViewController {
     // MARK: - Actions
 
     func didRefresh(sender: UIRefreshControl) {
-        print(#function);
+        delegate?.controllerDidRefresh(controller: self)
     }
     
 }

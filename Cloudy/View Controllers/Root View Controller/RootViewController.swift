@@ -23,7 +23,7 @@ class RootViewController: UIViewController {
 
     // MARK: -
 
-    private lazy var dataManager = {
+    fileprivate lazy var dataManager = {
         return DataManager(baseURL: API.AuthenticatedBaseURL)
     }()
 
@@ -38,18 +38,7 @@ class RootViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        dataManager.weatherDataForLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) { (response, error) in
-            if let error = error {
-                print(error)
-            } else if let response = response {
-                // Configure Day View Controller
-                self.dayViewController.now = response
-                self.dayViewController.delegate = self
-
-                // Configure Week View Controller
-                self.weekViewController.week = response.dailyData
-            }
-        }
+        fetchWeatherData()
     }
 
     // MARK: - Navigation
@@ -61,12 +50,20 @@ class RootViewController: UIViewController {
         case segueDayView:
             if let dayViewController = segue.destination as? DayViewController {
                 self.dayViewController = dayViewController
+
+                // Configure Day View Controller
+                self.dayViewController.delegate = self
+                
             } else {
                 fatalError("Unexpected Destination View Controller")
             }
         case segueWeekView:
             if let weekViewController = segue.destination as? WeekViewController {
                 self.weekViewController = weekViewController
+
+                // Configure Day View Controller
+                self.weekViewController.delegate = self
+
             } else {
                 fatalError("Unexpected Destination View Controller")
             }
@@ -97,12 +94,36 @@ class RootViewController: UIViewController {
         
     }
 
+    // MARK: - Helper Methods
+
+    fileprivate func fetchWeatherData() {
+        dataManager.weatherDataForLocation(latitude: Defaults.Latitude, longitude: Defaults.Longitude) { (response, error) in
+            if let error = error {
+                print(error)
+            } else if let response = response {
+                // Configure Day View Controller
+                self.dayViewController.now = response
+
+                // Configure Week View Controller
+                self.weekViewController.week = response.dailyData
+            }
+        }
+    }
+
 }
 
 extension RootViewController: DayViewControllerDelegate {
 
     func controllerDidTapSettingsButton(controller: DayViewController) {
         performSegue(withIdentifier: SegueSettingsView, sender: self)
+    }
+
+}
+
+extension RootViewController: WeekViewControllerDelegate {
+
+    func controllerDidRefresh(controller: WeekViewController) {
+        fetchWeatherData()
     }
 
 }
