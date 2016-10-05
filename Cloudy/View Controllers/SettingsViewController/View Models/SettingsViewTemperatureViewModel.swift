@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct SettingsViewTemperatureViewModel {
+struct SettingsViewTemperatureViewModel: SettingsRepresentable {
 
     // MARK: - Properties
 

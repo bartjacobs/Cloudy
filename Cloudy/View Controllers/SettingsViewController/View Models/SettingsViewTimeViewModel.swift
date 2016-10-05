@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct SettingsViewTimeViewModel {
+struct SettingsViewTimeViewModel: SettingsRepresentable {
 
     // MARK: - Properties
 
