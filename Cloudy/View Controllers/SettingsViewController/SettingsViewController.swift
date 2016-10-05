@@ -84,32 +84,21 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         guard let section = Section(rawValue: indexPath.section) else { fatalError("Unexpected Section") }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.reuseIdentifier, for: indexPath) as? SettingsTableViewCell else { fatalError("Unexpected Table View Cell") }
 
+        var viewModel: SettingsRepresentable?
+
         switch section {
         case .time:
             guard let timeNotation = TimeNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path") }
-
-            // Initialize View Model
-            let viewModel = SettingsViewTimeViewModel(timeNotation: timeNotation)
-
-            // Configure Cell
-            cell.mainLabel.text = viewModel.text
-            cell.accessoryType = viewModel.accessoryType
+            viewModel = SettingsViewTimeViewModel(timeNotation: timeNotation)
         case .units:
             guard let unitsNotation = UnitsNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path") }
-
-            // Initialize View Model
-            let viewModel = SettingsViewUnitsViewModel(unitsNotation: unitsNotation)
-
-            // Configure Cell
-            cell.mainLabel.text = viewModel.text
-            cell.accessoryType = viewModel.accessoryType
+            viewModel = SettingsViewUnitsViewModel(unitsNotation: unitsNotation)
         case .temperature:
             guard let temperatureNotation = TemperatureNotation(rawValue: indexPath.row) else { fatalError("Unexpected Index Path") }
+            viewModel = SettingsViewTemperatureViewModel(temperatureNotation: temperatureNotation)
+        }
 
-            // Initialize View Model
-            let viewModel = SettingsViewTemperatureViewModel(temperatureNotation: temperatureNotation)
-
-            // Configure Cell
+        if let viewModel = viewModel {
             cell.mainLabel.text = viewModel.text
             cell.accessoryType = viewModel.accessoryType
         }
