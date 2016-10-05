@@ -79,7 +79,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC08B9D91DA206C300754A85 /* SettingsViewController */ = {
+		CC08B9D91DA206C300754A85 /* Settings View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CC08B9DA1DA206EE00754A85 /* SettingsViewController.swift */,
@@ -87,7 +87,7 @@
 				CC76EFAB1DA4FAF5005EA806 /* View Models */,
 				CC08B9DC1DA20D8D00754A85 /* Table View Cells */,
 			);
-			path = SettingsViewController;
+			path = "Settings View Controller";
 			sourceTree = "<group>";
 		};
 		CC08B9DC1DA20D8D00754A85 /* Table View Cells */ = {
@@ -187,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CC89B42F1D9FE3D0006BFD6E /* Root View Controller */,
-				CC08B9D91DA206C300754A85 /* SettingsViewController */,
+				CC08B9D91DA206C300754A85 /* Settings View Controller */,
 				CC89B43E1D9FE58C006BFD6E /* Weather View Controllers */,
 			);
 			path = "View Controllers";
