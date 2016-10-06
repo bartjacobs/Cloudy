@@ -36,6 +36,7 @@
 		CC91AAFD1DA64F2F002901E5 /* SettingsViewTemperatureViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91AAFC1DA64F2F002901E5 /* SettingsViewTemperatureViewModelTests.swift */; };
 		CC91AB001DA6522F002901E5 /* forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = CC91AAFF1DA6522F002901E5 /* forecast.json */; };
 		CC91AB021DA6524A002901E5 /* DayViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91AB011DA6524A002901E5 /* DayViewViewModelTests.swift */; };
+		CC91AB071DA65CC4002901E5 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91AB061DA65CC4002901E5 /* XCTestCase.swift */; };
 		CCBE3EFC1DA3E1B000F24749 /* WeekViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE3EFB1DA3E1B000F24749 /* WeekViewViewModel.swift */; };
 		CCBE8CCD1DA29BE500EBC070 /* DayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */; };
 		CCBE8CCF1DA2A2B500EBC070 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */; };
@@ -85,6 +86,7 @@
 		CC91AAFC1DA64F2F002901E5 /* SettingsViewTemperatureViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewTemperatureViewModelTests.swift; sourceTree = "<group>"; };
 		CC91AAFF1DA6522F002901E5 /* forecast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forecast.json; sourceTree = "<group>"; };
 		CC91AB011DA6524A002901E5 /* DayViewViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewViewModelTests.swift; sourceTree = "<group>"; };
+		CC91AB061DA65CC4002901E5 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		CCBE3EFB1DA3E1B000F24749 /* WeekViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewViewModel.swift; sourceTree = "<group>"; };
 		CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
 		CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				CC91AAFE1DA650FE002901E5 /* Stubs */,
+				CC91AB051DA65C34002901E5 /* Extensions */,
 				CC91AAF71DA64CA7002901E5 /* Test Cases */,
 				CC91AAF61DA64C17002901E5 /* Supporting Files */,
 			);
@@ -338,6 +341,14 @@
 				CC91AAFF1DA6522F002901E5 /* forecast.json */,
 			);
 			path = Stubs;
+			sourceTree = "<group>";
+		};
+		CC91AB051DA65C34002901E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC91AB061DA65CC4002901E5 /* XCTestCase.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CCBE8CCB1DA29A0E00EBC070 /* View Models */ = {
@@ -491,6 +502,7 @@
 				CC91AAFB1DA64DB4002901E5 /* SettingsViewUnitsViewModelTests.swift in Sources */,
 				CC91AAFD1DA64F2F002901E5 /* SettingsViewTemperatureViewModelTests.swift in Sources */,
 				CC91AB021DA6524A002901E5 /* DayViewViewModelTests.swift in Sources */,
+				CC91AB071DA65CC4002901E5 /* XCTestCase.swift in Sources */,
 				CC91AAF91DA64D31002901E5 /* SettingsViewTimeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
