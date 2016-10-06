@@ -38,6 +38,7 @@
 		CC91AB021DA6524A002901E5 /* DayViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91AB011DA6524A002901E5 /* DayViewViewModelTests.swift */; };
 		CC91AB071DA65CC4002901E5 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91AB061DA65CC4002901E5 /* XCTestCase.swift */; };
 		CC91AB091DA65EE5002901E5 /* WeekViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91AB081DA65EE5002901E5 /* WeekViewViewModelTests.swift */; };
+		CC91AB0B1DA65F32002901E5 /* WeatherDayViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91AB0A1DA65F32002901E5 /* WeatherDayViewViewModelTests.swift */; };
 		CCBE3EFC1DA3E1B000F24749 /* WeekViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE3EFB1DA3E1B000F24749 /* WeekViewViewModel.swift */; };
 		CCBE8CCD1DA29BE500EBC070 /* DayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */; };
 		CCBE8CCF1DA2A2B500EBC070 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */; };
@@ -89,6 +90,7 @@
 		CC91AB011DA6524A002901E5 /* DayViewViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewViewModelTests.swift; sourceTree = "<group>"; };
 		CC91AB061DA65CC4002901E5 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		CC91AB081DA65EE5002901E5 /* WeekViewViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewViewModelTests.swift; sourceTree = "<group>"; };
+		CC91AB0A1DA65F32002901E5 /* WeatherDayViewViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDayViewViewModelTests.swift; sourceTree = "<group>"; };
 		CCBE3EFB1DA3E1B000F24749 /* WeekViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewViewModel.swift; sourceTree = "<group>"; };
 		CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
 		CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			children = (
 				CC91AB011DA6524A002901E5 /* DayViewViewModelTests.swift */,
 				CC91AB081DA65EE5002901E5 /* WeekViewViewModelTests.swift */,
+				CC91AB0A1DA65F32002901E5 /* WeatherDayViewViewModelTests.swift */,
 				CC91AAF81DA64D31002901E5 /* SettingsViewTimeViewModel.swift */,
 				CC91AAFA1DA64DB4002901E5 /* SettingsViewUnitsViewModelTests.swift */,
 				CC91AAFC1DA64F2F002901E5 /* SettingsViewTemperatureViewModelTests.swift */,
@@ -503,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC91AAFB1DA64DB4002901E5 /* SettingsViewUnitsViewModelTests.swift in Sources */,
+				CC91AB0B1DA65F32002901E5 /* WeatherDayViewViewModelTests.swift in Sources */,
 				CC91AAFD1DA64F2F002901E5 /* SettingsViewTemperatureViewModelTests.swift in Sources */,
 				CC91AB021DA6524A002901E5 /* DayViewViewModelTests.swift in Sources */,
 				CC91AB071DA65CC4002901E5 /* XCTestCase.swift in Sources */,
