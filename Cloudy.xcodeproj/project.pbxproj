@@ -31,6 +31,7 @@
 		CC89B44C1D9FEB73006BFD6E /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */; };
 		CC89B4501D9FEC2E006BFD6E /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B44F1D9FEC2E006BFD6E /* WeatherData.swift */; };
 		CC89B4521D9FECBE006BFD6E /* WeatherDayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */; };
+		CC91AAF91DA64D31002901E5 /* SettingsViewTimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91AAF81DA64D31002901E5 /* SettingsViewTimeViewModel.swift */; };
 		CCBE3EFC1DA3E1B000F24749 /* WeekViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE3EFB1DA3E1B000F24749 /* WeekViewViewModel.swift */; };
 		CCBE8CCD1DA29BE500EBC070 /* DayViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */; };
 		CCBE8CCF1DA2A2B500EBC070 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */; };
@@ -75,6 +76,7 @@
 		CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDayData.swift; sourceTree = "<group>"; };
 		CC91AAEA1DA648C7002901E5 /* CloudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC91AAEE1DA648C7002901E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC91AAF81DA64D31002901E5 /* SettingsViewTimeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewTimeViewModel.swift; sourceTree = "<group>"; };
 		CCBE3EFB1DA3E1B000F24749 /* WeekViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewViewModel.swift; sourceTree = "<group>"; };
 		CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
 		CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 		CC91AAF71DA64CA7002901E5 /* Test Cases */ = {
 			isa = PBXGroup;
 			children = (
+				CC91AAF81DA64D31002901E5 /* SettingsViewTimeViewModel.swift */,
 			);
 			path = "Test Cases";
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 					CC91AAE91DA648C7002901E5 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2493UGBPKJ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CC89B4161D9FE314006BFD6E;
 					};
@@ -463,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC91AAF91DA64D31002901E5 /* SettingsViewTimeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,11 +603,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2493UGBPKJ;
 				INFOPLIST_FILE = "CloudyTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cocoacasts.CloudyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
 			};
@@ -612,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2493UGBPKJ;
 				INFOPLIST_FILE = "CloudyTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
