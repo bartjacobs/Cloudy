@@ -36,6 +36,16 @@
 		CCBE8CCF1DA2A2B500EBC070 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CC91AAEF1DA648C7002901E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC89B40F1D9FE314006BFD6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC89B4161D9FE314006BFD6E;
+			remoteInfo = Cloudy;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CC08B9DA1DA206EE00754A85 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CC08B9DD1DA20DB400754A85 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -63,6 +73,8 @@
 		CC89B44B1D9FEB73006BFD6E /* JSONDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		CC89B44F1D9FEC2E006BFD6E /* WeatherData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		CC89B4511D9FECBE006BFD6E /* WeatherDayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDayData.swift; sourceTree = "<group>"; };
+		CC91AAEA1DA648C7002901E5 /* CloudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC91AAEE1DA648C7002901E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCBE3EFB1DA3E1B000F24749 /* WeekViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewViewModel.swift; sourceTree = "<group>"; };
 		CCBE8CCC1DA29BE500EBC070 /* DayViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewViewModel.swift; sourceTree = "<group>"; };
 		CCBE8CCE1DA2A2B500EBC070 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -70,6 +82,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		CC89B4141D9FE314006BFD6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC91AAE71DA648C7002901E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				CC89B4191D9FE314006BFD6E /* Cloudy */,
+				CC91AAEB1DA648C7002901E5 /* CloudyTests */,
 				CC89B4181D9FE314006BFD6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				CC89B4171D9FE314006BFD6E /* Cloudy.app */,
+				CC91AAEA1DA648C7002901E5 /* CloudyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,6 +293,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CC91AAEB1DA648C7002901E5 /* CloudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC91AAF71DA64CA7002901E5 /* Test Cases */,
+				CC91AAF61DA64C17002901E5 /* Supporting Files */,
+			);
+			path = CloudyTests;
+			sourceTree = "<group>";
+		};
+		CC91AAF61DA64C17002901E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC91AAEE1DA648C7002901E5 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC91AAF71DA64CA7002901E5 /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Test Cases";
+			sourceTree = "<group>";
+		};
 		CCBE8CCB1DA29A0E00EBC070 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +347,24 @@
 			productReference = CC89B4171D9FE314006BFD6E /* Cloudy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CC91AAE91DA648C7002901E5 /* CloudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC91AAF31DA648C7002901E5 /* Build configuration list for PBXNativeTarget "CloudyTests" */;
+			buildPhases = (
+				CC91AAE61DA648C7002901E5 /* Sources */,
+				CC91AAE71DA648C7002901E5 /* Frameworks */,
+				CC91AAE81DA648C7002901E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC91AAF01DA648C7002901E5 /* PBXTargetDependency */,
+			);
+			name = CloudyTests;
+			productName = CloudyTests;
+			productReference = CC91AAEA1DA648C7002901E5 /* CloudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,6 +379,12 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 2493UGBPKJ;
 						ProvisioningStyle = Automatic;
+					};
+					CC91AAE91DA648C7002901E5 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2493UGBPKJ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CC89B4161D9FE314006BFD6E;
 					};
 				};
 			};
@@ -333,6 +402,7 @@
 			projectRoot = "";
 			targets = (
 				CC89B4161D9FE314006BFD6E /* Cloudy */,
+				CC91AAE91DA648C7002901E5 /* CloudyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -345,6 +415,13 @@
 				CC89B43C1D9FE3D0006BFD6E /* LaunchScreen.storyboard in Resources */,
 				CC89B43B1D9FE3D0006BFD6E /* Assets.xcassets in Resources */,
 				CC89B43D1D9FE3D0006BFD6E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC91AAE81DA648C7002901E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +459,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC91AAE61DA648C7002901E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC91AAF01DA648C7002901E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC89B4161D9FE314006BFD6E /* Cloudy */;
+			targetProxy = CC91AAEF1DA648C7002901E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CC89B4271D9FE314006BFD6E /* Debug */ = {
@@ -502,6 +594,34 @@
 			};
 			name = Release;
 		};
+		CC91AAF11DA648C7002901E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2493UGBPKJ;
+				INFOPLIST_FILE = "CloudyTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocoacasts.CloudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
+			};
+			name = Debug;
+		};
+		CC91AAF21DA648C7002901E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2493UGBPKJ;
+				INFOPLIST_FILE = "CloudyTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cocoacasts.CloudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cloudy.app/Cloudy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -522,6 +642,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CC91AAF31DA648C7002901E5 /* Build configuration list for PBXNativeTarget "CloudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC91AAF11DA648C7002901E5 /* Debug */,
+				CC91AAF21DA648C7002901E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
