@@ -17,7 +17,7 @@ class DayViewViewModelTests: XCTestCase {
         super.setUp()
 
         // Load Stub
-        let data = loadDataFromBundle()
+        let data = loadStubFromBundle(withName: "forecast", extension: "json")
         let weatherData: WeatherData = try! JSONDecoder.decode(data: data)
 
         // Initialize View Model
@@ -103,15 +103,6 @@ class DayViewViewModelTests: XCTestCase {
         XCTAssertEqual(viewModelImage!.size.width, 236.0)
         XCTAssertEqual(viewModelImage!.size.height, 172.0)
         XCTAssertEqual(imageDataViewModel, imageDataReference)
-    }
-
-    // MARK: - Helper Methods
-
-    private func loadDataFromBundle() -> Data {
-        let bundle = Bundle(for: classForCoder)
-        let url = bundle.url(forResource: "forecast", withExtension: "json")
-
-        return try! Data(contentsOf: url!)
     }
 
 }
